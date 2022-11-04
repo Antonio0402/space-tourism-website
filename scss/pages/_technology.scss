@@ -1,0 +1,17 @@
+@use '../utilities' as u;
+
+.technology {
+  background-image: url('../../assets/technology/background-technology-mobile.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden; 
+
+  @include u.for-tablet-portrait-only {
+    background-position: center center;
+    background-image: url('../../assets/technology/background-technology-tablet.jpg');
+  }
+
+  @include u.for-tablet-landscape-up {
+    background-image: url('../../assets/technology/background-technology-desktop.jpg')
+  }
+} 

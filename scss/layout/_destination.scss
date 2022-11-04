@@ -1,0 +1,114 @@
+@use '../utilities' as u;
+
+.destination {
+    .grid-container--destination {
+    height: 100%;
+    align-items: end;
+    grid-template-areas: 
+      "title"
+      "image"
+      "tabs"
+      "content";
+
+    .numbered-title {
+      grid-area: title;
+      margin-block-end: 2rem;
+      @include u.for-tablet-portrait-up {
+        justify-self: start;
+      }
+    }
+    
+    .destination__image {
+      grid-area: image;
+      max-width: 60%;
+      margin-block-end: 1.625rem;
+    }
+    
+    .tab-list {
+      grid-area: tabs;
+      margin-block-end: 1.25rem;
+      --gap: 1.625rem;
+
+      @include u.for-tablet-portrait-up {
+        --gap: 2.25rem;
+      }
+    }
+
+    .destination__info {
+      grid-area: content;
+    }
+
+    .destination__meta {
+      --gap: min(4.25rem, 8vw);
+      border-top: 1px solid hsla(231, 15%, 26%, 1);
+      padding-top: 2rem;
+      margin-block-start: 2rem;
+
+      @include u.for-tablet-portrait-up {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+    
+    @include u.for-tablet-portrait-only {
+      .numbered-title {
+        margin-block-end: 3.75rem; 
+      }
+
+      .destination__image {
+        margin-block-end: 3.375rem; 
+      }
+
+      .tab-list {
+        margin-block-end: 2rem;
+      }
+
+      .destination__info {
+        
+        h2 {
+          margin-block-end: 0.5rem;  
+        }  
+      }
+
+      .destination__meta {
+        margin-block-start: 3rem;
+      }
+    }
+
+    @include u.for-tablet-landscape-up {
+      grid-template-areas: 
+      " . title title . "
+      " . image tabs . "
+      " . image content . ";
+      padding-bottom: 6rem;
+
+      .numbered-title {
+        margin-block-end: 4rem;
+      }
+
+      .destination__image {
+        margin-block-end: 0;
+        max-width: 100%; 
+      }
+
+      .tab-list {
+        margin-block-end: 2.25rem;
+        justify-self: start; 
+      }
+
+      .destination__info {
+        
+        h2 {
+          margin-block-end: 0.875rem;  
+        }  
+      }
+
+      .destination__meta {
+        padding-top: 1.75rem;
+        margin-block-start: 3.375rem;
+        justify-content: start;
+      }
+    }
+    
+  }
+}

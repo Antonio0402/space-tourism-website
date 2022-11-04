@@ -1,0 +1,16 @@
+@use '../utilities' as u;
+.destination {
+  background-image: url('../../assets/destination/background-destination-mobile.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden; 
+
+  @include u.for-tablet-portrait-only {
+    background-position: center center;
+    background-image: url('../../assets/destination/background-destination-tablet.jpg');
+  }
+
+  @include u.for-tablet-landscape-up {
+    background-image: url('../../assets/destination/background-destination-desktop.jpg')
+  }
+}

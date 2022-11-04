@@ -1,0 +1,45 @@
+/* ------------------------ */
+/* Custom fonts properties */
+/* ------------------------ */
+@use '../utilities' as u;
+
+:root {
+
+  /* font-sizes */
+  --fs-200: 0.875rem; ///14px
+  --fs-300: 0.875rem;
+  --fs-400: 0.9375rem; ///15px
+  --fs-500: 1rem; ///16px
+  --fs-600: 1rem; ///16px
+  --fs-700: 1.5rem; //24px
+  --fs-800: 3.5rem; ///56px
+  --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
+
+  /* font-families */
+  --ff-serif: 'Bellefair', serif;
+  --ff-sans-cond: 'Barlow Condensed', sans-serif;
+  --ff-sans-normal: 'Barlow', sans-serif;  
+
+  @include u.for-tablet-portrait-only {
+
+    --fs-800: 5rem; ///80px
+    --fs-700: 2.5rem; ///40px
+    --fs-600: 1.5rem; ///24px
+    --fs-500: 1.25rem; //20px 
+    --fs-400: 1rem;
+  }
+  
+  @include u.for-tablet-landscape-up {
+
+    --fs-800: 6.25rem; ///100px
+    --fs-700: 3.5rem; ///56px
+    --fs-600: 2rem; ///32px
+    --fs-500: 1.75rem; ///28px
+    --fs-400: 1.125rem; ///18px
+    --fs-300: 1rem;
+  }
+}
+
+
+
+

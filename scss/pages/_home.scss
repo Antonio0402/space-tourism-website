@@ -1,0 +1,37 @@
+/* ------------------ */
+/* Homepage           */
+/* ------------------ */
+@use '../utilities' as u;
+.home {
+
+  background-image: url('../../assets/home/background-home-mobile.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden;
+
+  .skip-to-content {
+    position: absolute;
+    top: 0;
+    width: max-content;
+    height: auto;;
+    padding: 0.5em 1em;
+    margin-inline: auto;
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+    border-radius: 0.5rem;
+    transform: translateY(-100%);
+
+    &:focus-visible {
+      transform: translateY(0);
+    }
+  }
+
+  @include u.for-tablet-portrait-only {
+    background-position: center center;
+    background-image: url('../../assets/home/background-home-tablet.jpg');
+  }
+
+  @include u.for-tablet-landscape-up {
+    background-image: url('../../assets/home/background-home-desktop.jpg')
+  }
+}

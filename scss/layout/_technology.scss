@@ -1,0 +1,116 @@
+@use '../utilities' as u;
+
+.technology {
+
+  .grid-container--technology {
+    height: 100%;
+    align-items: start;
+    grid-template-areas: 
+      "title"
+      "image"
+      "tabs"
+      "content";
+
+    .numbered-title {
+      grid-area: title;
+
+      @include u.for-tablet-portrait-up {
+        justify-self: start;
+      }
+    }
+    
+    .technology__img {
+      grid-area: image;
+      // & > img:last-child {
+      //   display: none;
+      // }
+    }
+
+
+    .circle-list {
+      grid-area: tabs; 
+      --gap: 1rem;
+
+      @include u.for-tablet-portrait-up {
+        --gap: 1.5rem;
+      }
+    }
+
+    .technology__details {
+      grid-area: content;
+
+      .technology__header {
+        --gap: 0.5rem;
+      }
+    }
+
+    @include u.for-tablet-portrait-up {
+      padding-bottom: 6rem;
+    }
+
+    @include u.for-tablet-portrait-only {
+
+      .numbered-title {
+        margin-block-end: 3.75rem; 
+      }
+
+      .technology__img {
+        margin-block-end: 3.5rem;
+      }
+
+      .circle-list {
+        margin-block-end: 2.75rem;
+        
+        & > * {
+          width: 3.625rem;
+        }
+      }
+    }
+
+    @include u.for-tablet-landscape-up {
+      grid-template-areas: 
+      ". title title ."
+      ". tabs content image"
+      ". tabs content image";
+
+      .numbered-title {
+        margin-block-end: 1.625rem; 
+      }
+
+      .technology__img {
+        justify-self: end;
+
+        // & > img {
+        //   &:first-child {
+        //     display: none;
+        //   }
+        //   &:last-child {
+        //     display: inline-block;  
+        //   }
+        // }
+      }
+      
+      .circle-list {
+        flex-direction: column;
+        align-self: center;
+        align-items: start;
+        width: 100%;
+        --gap: 2rem;
+        & > * {
+          width: 5rem;  
+        }
+      }
+
+      .technology__details {
+        align-self: center;
+        text-align: left;
+      }
+    }   
+  }
+  .grid-container {
+
+    @include u.for-tablet-landscape-up {
+       grid-template-columns: minmax(1em, 1fr) minmax(5em, 1fr) minmax(0, 30rem) minmax(0, 50rem);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.large-button {
+
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  padding-inline: 2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 2rem;
+
+  &::after {
+    
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsla(var(--clr-white), .15);
+    opacity: 0;
+    transition: opacity 0.3s linear, transform 0.5s ease-in-out;
+  }
+
+  &:hover, &:focus {
+    &::after {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+  }
+
+}

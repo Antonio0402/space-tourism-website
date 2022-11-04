@@ -1,0 +1,16 @@
+@use '../utilities' as u;
+.grid-container--home {
+  height: 100%;
+  align-items: end;
+
+  @include u.for-tablet-landscape-up {
+    
+    & > *:first-child {
+      grid-column: 2;
+    }
+    & > *:last-child {
+      grid-column: 3;
+    }
+    padding-bottom: 6rem;
+  }
+}

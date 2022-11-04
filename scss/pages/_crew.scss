@@ -1,0 +1,16 @@
+@use '../utilities' as u;
+.crew {
+  background-image: url('../../assets/crew/background-crew-mobile.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden; 
+
+  @include u.for-tablet-portrait-only {
+    background-position: center center;
+    background-image: url('../../assets/crew/background-crew-tablet.jpg');
+  }
+
+  @include u.for-tablet-landscape-up {
+    background-image: url('../../assets/crew/background-crew-desktop.jpg')
+  }
+}
