@@ -3,7 +3,6 @@
   background-image: url('../../assets/destination/background-destination-mobile.jpg');
   background-size: cover;
   background-position: bottom center;
-  overflow: hidden; 
 
   @include u.for-tablet-portrait-only {
     background-position: center center;
