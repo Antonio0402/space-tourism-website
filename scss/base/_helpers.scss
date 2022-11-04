@@ -173,3 +173,17 @@
     border-color: hsla(var(--clr-white), 1);  
   }
 }
+
+.primary-navigation {
+  
+  gap: var(--gap, 3em);
+  --underline-gap: 2.375rem;
+  list-style: none;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0; 
+
+  & a {
+    text-decoration: none;   
+  }
+}
