@@ -29,11 +29,11 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile Design](./assets/screenshot/mobile-screenshoot.png)
-![Desktop Design](./assets/screenshot/desktop-screenshoot.png)
+![Desktop Design](./assets/screenshot/desktop-screenshot.png)
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
+- Solution URL: [Click here](https://github.com/Antonio0402/space-tourism-website)
 - Live Site URL: [Click here](https://your-live-site-url.com)
 
 ## My process
